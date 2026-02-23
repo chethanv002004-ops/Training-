@@ -1,0 +1,22 @@
+public class prog1 {
+    static double getFinalAmount(double amount, boolean isMember){
+        double dis = 0.0;
+        if(amount >=1000){
+            if(isMember == true){
+                System.out.println("20% discount");
+                dis = amount * 0.20;          
+                amount = amount - dis;
+            }else{
+                System.out.println("10% discount");
+                dis = amount * 0.10;          
+                amount = amount - dis;
+            }
+        }else{
+            System.out.println("No discount");
+        }
+        return amount;
+    }
+  public static void main(String[] args) {
+    System.out.println(getFinalAmount(10000, true));
+  }
+}
