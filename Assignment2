@@ -1,0 +1,74 @@
+import java.util.*;
+
+public class Assignment2 {
+    public static void main(String[] args) {
+
+        LinkedList<String> months = new LinkedList<>();
+
+        // Add 6 months
+        months.add("May");
+        months.add("June");
+        months.add("July");
+        months.add("August");
+        months.add("April");
+        months.add("November");
+
+        // Add December as last
+        months.add("December");
+
+        // Add January as first
+        months.addFirst("January");
+
+        // Add March then February using index
+        months.add(1, "March");
+        months.add(2, "February");
+
+        // Add September, then October using index
+        months.add(5, "September");
+        months.add(6, "October");
+
+        // (1) Print proper order
+        System.out.println("All months: " + months);
+
+        // (2) Print even months
+        System.out.println("Even index months:");
+        for (int i = 1; i < months.size(); i += 2)
+            System.out.println(months.get(i));
+
+        // (3) Print odd months
+        System.out.println("Odd index months:");
+        for (int i = 0; i < months.size(); i += 2)
+            System.out.println(months.get(i));
+
+        // (4) Use iterator
+        System.out.println("Using Iterator:");
+        Iterator<String> it = months.iterator();
+        while (it.hasNext())
+            System.out.println(it.next());
+
+        // (5) Print first & last month
+        System.out.println("First: " + months.getFirst());
+        System.out.println("Last: " + months.getLast());
+
+        // (6) Remove your birthday month (example: June)
+        String birthdayMonth = "June";
+        months.remove(birthdayMonth);
+        System.out.println("Removed birthday month: " + birthdayMonth);
+
+        // (7) Check winter months
+        System.out.println("Contains winter month (Dec/Jan/Feb)? " +
+                (months.contains("December") ||
+                 months.contains("January") ||
+                 months.contains("February")));
+
+        // (8) Fetch first & last using peek()
+        System.out.println("Peek First: " + months.peekFirst());
+        System.out.println("Peek Last: " + months.peekLast());
+
+        // (9) Remove first & last using poll()
+        System.out.println("Polled First: " + months.pollFirst());
+        System.out.println("Polled Last: " + months.pollLast());
+
+        System.out.println("Final List: " + months);
+    }
+}
