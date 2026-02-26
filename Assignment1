@@ -1,0 +1,60 @@
+import java.util.*;
+
+public class Assignment1 {
+    public static void main(String[] args) {
+
+        ArrayList<String> list = new ArrayList<>();
+
+        // Add 6 fruits
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Mango");
+        list.add("Orange");
+        list.add("Grapes");
+        list.add("Pineapple");
+
+        // Add 2 cities
+        list.add("Bangalore");
+        list.add("Mumbai");
+
+        // Add 2 hobbies
+        list.add("Singing");
+        list.add("Reading");
+
+        // print the arraylist
+        System.out.println("Initial List: " + list);
+
+        // remove one hobby
+        list.remove("Reading");
+
+        // search("cricket")
+        System.out.println("Contains 'cricket'? : " + list.contains("cricket"));
+
+        // remove 1 city & 1 fruit
+        list.remove("Mumbai");
+        list.remove("Apple");
+
+        // print 4th & 6th element together
+        System.out.println("4th element: " + list.get(3));
+        System.out.println("6th element: " + list.get(5));
+
+        // replace hobby "Singing" with "Dancing"
+        int index = list.indexOf("Singing");
+        if (index != -1) list.set(index, "Dancing");
+
+        // reverse the arraylist
+        Collections.reverse(list);
+        System.out.println("Reversed List: " + list);
+
+        // add "Kerala" at 4th position, "Mango" at 2nd
+        list.add(3, "Kerala");
+        list.add(1, "Mango");
+
+        // find length
+        System.out.println("Length: " + list.size());
+
+        // remove all elements
+        list.clear();
+        System.out.println("Final List (after clear): " + list);
+    }
+}
