@@ -1,0 +1,79 @@
+import java.util.*;
+
+public class Assignment3 {
+    public static void main(String[] args) {
+
+        // Create HashMap of 10 countries
+        HashMap<Integer, String> countryMap = new HashMap<>();
+        countryMap.put(1, "India");
+        countryMap.put(2, "USA");
+        countryMap.put(3, "Japan");
+        countryMap.put(4, "Canada");
+        countryMap.put(5, "Australia");
+        countryMap.put(6, "Brazil");
+        countryMap.put(7, "Russia");
+        countryMap.put(8, "China");
+        countryMap.put(9, "Germany");
+        countryMap.put(10, "France");
+
+        // fetch all keys
+        System.out.println("All Keys: " + countryMap.keySet());
+
+        // fetch all values
+        System.out.println("All Values: " + countryMap.values());
+
+        // check if value "India" exists
+        System.out.println("Contains 'India'? : " + countryMap.containsValue("India"));
+
+        // check if key 45 exists
+        System.out.println("Contains key 45? : " + countryMap.containsKey(45));
+
+        // remove 1 country (remove key 7 for example)
+        countryMap.remove(7);
+        System.out.println("After removing key 7: " + countryMap);
+
+        // ------------------------------------------
+        // Create NEW map (statecode = key, statename = value)
+        // ------------------------------------------
+
+        HashMap<Integer, String> stateMap = new HashMap<>();
+        stateMap.put(11, "Karnataka");
+        stateMap.put(12, "Tamil Nadu");
+        stateMap.put(13, "Kerala");
+        stateMap.put(14, "Maharashtra");
+        stateMap.put(15, "Gujarat");
+
+        // Merge with countryMap
+        countryMap.putAll(stateMap);
+        System.out.println("After merging country + state: " + countryMap);
+
+        // delete key(5)
+        countryMap.remove(5);
+        System.out.println("After deleting key 5: " + countryMap);
+
+        // check if map is empty
+        System.out.println("Is map empty? : " + countryMap.isEmpty());
+
+        // clear the map
+        countryMap.clear();
+        System.out.println("Map after clear(): " + countryMap);
+
+        // Now sort the final merged map (sorting keys)
+        // Recreate merged map for sorting
+        HashMap<Integer, String> sortedMapSource = new HashMap<>();
+        sortedMapSource.put(1, "India");
+        sortedMapSource.put(2, "USA");
+        sortedMapSource.put(3, "Japan");
+        sortedMapSource.put(4, "Canada");
+        sortedMapSource.put(6, "Brazil");
+        sortedMapSource.put(8, "China");
+        sortedMapSource.put(9, "Germany");
+        sortedMapSource.put(10, "France");
+
+        sortedMapSource.putAll(stateMap);
+
+        // TreeMap for sorting
+        TreeMap<Integer, String> sortedMap = new TreeMap<>(sortedMapSource);
+        System.out.println("Sorted Final Map: " + sortedMap);
+    }
+}
