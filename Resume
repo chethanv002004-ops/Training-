@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Resume – Example Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    :root{
+      --border:#111;
+      --muted:#555;
+      --accent:#0b5fff;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f7f7f7;
+      margin:24px;
+      display:flex; 
+      justify-content:center;
+    }
+    .resume{
+      background:#fff;
+      border:2px solid var(--border);
+      width: 760px;
+      max-width: 100%;
+      padding:22px 26px 28px;
+    }
+    .top{
+      display:flex;
+      gap:22px;
+      align-items:flex-start;
+      margin-bottom:18px;
+    }
+    .photo{
+      width:120px; height:120px;
+      border:2px solid var(--border);
+      overflow:hidden; 
+      flex:0 0 120px;
+      background:#eee;
+    }
+    .photo img{
+      width:100%; height:100%; object-fit:cover;
+      display:block;
+    }
+    .heading h1{
+      margin:0 0 6px 0; font-size:24px; letter-spacing:.5px;
+    }
+    .heading .label{ color:var(--muted); margin-bottom:6px; }
+    .heading .name{ font-weight:700; }
+    .heading .email a{ color:var(--accent); text-decoration:none; }
+    h3{
+        margin:18px 0 8px; font-size:18px;
+      border-bottom:1px solid #ddd; padding-bottom:4px;
+    }
+    p{ margin:8px 0; line-height:1.45; }
+    ul{ margin:6px 0 8px 20px; }
+    .projects{
+      display:flex; gap:14px; flex-wrap:wrap; margin-top:6px;
+    }
+    .project-box{
+      border:2px solid var(--border);
+      padding:10px 12px; width:320px; background:#fafafa;
+    }
+    .project-box h4{ margin:0 0 6px; }
+    .two-col{
+      display:grid; grid-template-columns: 1fr 1fr; gap:14px;
+    }
+    .small{ color:var(--muted); font-size:13px; }
+  </style>
+</head>
+<body>
+
+  <main class="resume">
+    <!-- Top: Photo + Headings -->
+    <section class="top">
+      <div class="photo">
+        <!-- /home/labuser/Desktop/web development/photo-1599508704512-2f19efd1e35f.avif-->
+        <img src="images/myphoto.jpg" alt="Profile photo">
+      </div>
+
+      <div class="heading">
+        <div class="label">RESUME</div>
+        <h1 class="name">Chethan Venkatesh</h1>
+        <div class="email">Email: <a href="mailto:chethan@example.com">chethan@example.com</a></div>
+        <div class="small">Phone: +91-98765-43210 · Bengaluru</div>
+      </div>
+    </section>
+
+    <!-- Objective (≈100 words) -->
+    <h3>Objective</h3>
+    <p>
+      Aspiring software developer and current apprentice with a strong interest in building clean, reliable applications. 
+      I aim to contribute to real-world projects where I can apply core Java, data structures, and web fundamentals while 
+      learning production practices such as version control, unit testing, and debugging. I value simple design, readable 
+      code, and collaborative teamwork. Over the next year, my goal is to deepen my understanding of problem solving, 
+      algorithms, and API integration, and to deliver features that improve user experience and performance in measurable ways.
+    </p>
+    <!-- Marks -->
+    <h3>Marks</h3>
+    <ul>
+      <li>10th Board – 88%</li>
+      <li>12th Board – 86%</li>
+    </ul>
+
+    <!-- Technologies -->
+    <h3>Technologies</h3>
+    <ul>
+      <li>Java, OOP, Collections (ArrayList, LinkedList, HashMap)</li>
+      <li>HTML, CSS, Basic JavaScript · Git & GitHub · Eclipse/VS Code</li>
+    </ul>
+
+    <!-- About You (≈200 words) -->
+    <h3>About You</h3>
+    <p>
+      I am a detail-oriented learner who enjoys understanding how systems work from the ground up. 
+      During my apprenticeship, I have practiced writing modular Java programs, handling exceptions, 
+      and organizing code into packages to keep responsibilities clear. I like to break problems into 
+      small steps, write simple tests, and iterate until the solution is robust. When I get stuck, I 
+      read documentation, search for minimal examples, and ask focused questions. Outside pure coding, 
+      I care about communication and sharing findings with teammates through short notes or demos.
+    </p>
+    <p>
+      Recently, I have experimented with building basic web pages and connecting them to Java backends. 
+      I am comfortable using Git branches, logging meaningful messages, and reviewing pull requests. 
+      My immediate focus areas are improving algorithmic thinking, writing cleaner unit tests with JUnit, 
+      and learning how to read unfamiliar codebases quickly. I am motivated by mentorship, constructive feedback, 
+      and opportunities to turn specifications into working features that customers actually use.
+    </p>
+
+    <!-- Projects (two DIV elements) -->
+    <h3>Projects</h3>
+    <div class="projects">
+      <div class="project-box">
+        <h4>1st project – Banking Console App</h4>
+        <p class="small">Java · Custom exceptions · Collections</p>
+        <p>
+          Built a small console application to simulate accounts, deposits, withdrawals, and transfers. 
+          Implemented custom exceptions for low balance and invalid operations; stored users in a HashMap 
+          and transactions in an ArrayList.
+        </p>
+      </div>
+
+      <div class="project-box">
+        <h4>2nd project – Student Records Manager</h4>
+        <p class="small">Java · File I/O · Sorting & Filtering</p>
+        <p>
+          Designed a CLI to add, update, and list students with marks. 
+          Implemented sorting by total and filtering by subject; persisted data to CSV and loaded on startup.
+        </p>
+      </div>
+    </div>
+
+    <!-- Personal Details -->
+    <h3>Personal Details</h3>
+    <ul>
+      <li>DOB: 15-08-2004</li>
+      <li>City: Bengaluru</li>
+    </ul>
+  </main>
+
+</body>
+</html>
